@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. BAE Exotokine Essence Gel — 전문가 교육 자료</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --gold:#b8952a;--gold-light:#f5e9c4;--gold-dark:#8a6b10;
+  --text-primary:#1a1a18;--text-secondary:#4a4a46;--text-tertiary:#7a7a74;
+  --border:#e2e0d8;--border-light:#efefeb;
+  --bg:#ffffff;--bg-secondary:#f8f7f4;--bg-tertiary:#f2f1ed;
+  --green-bg:#eaf3de;--green-text:#3b6d11;
+  --blue-bg:#e6f1fb;--blue-text:#185fa5;
+  --amber-bg:#faeeda;--amber-text:#854f0b;
+  --coral-bg:#faece7;--coral-text:#993c1d;
+  --purple-bg:#eeedfe;--purple-text:#3c3489;
+  --teal-bg:#e1f5ee;--teal-text:#0f6e56;
+  --radius:8px;--radius-lg:12px;
+}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--text-primary);background:#f0ede6;font-size:clamp(12px,1.6vw,13.5px);line-height:1.75;}
+.wrapper{max-width:900px;margin:0 auto;padding:16px 16px 60px;}
+
+/* HEADER */
+.doc-header{background:var(--bg);border-radius:var(--radius-lg);padding:28px 32px 24px;margin-bottom:14px;border:0.5px solid var(--border);position:relative;overflow:hidden;}
+.doc-header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),#d4a93a,var(--gold));}
+.doc-watermark{font-size:9px;color:var(--text-tertiary);letter-spacing:.04em;text-align:right;line-height:1.6;margin-bottom:8px;}
+.doc-eyebrow{font-size:10px;letter-spacing:.16em;color:var(--gold);font-weight:500;text-transform:uppercase;margin-bottom:6px;}
+.doc-title{font-family:'Playfair Display',serif;font-size:clamp(20px,4vw,29px);color:var(--text-primary);line-height:1.25;margin-bottom:4px;}
+.doc-title-en{font-family:'Playfair Display',serif;font-size:clamp(12px,2vw,16px);color:var(--gold-dark);font-style:italic;margin-bottom:12px;}
+.doc-meta-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px;}
+.doc-meta-item{background:var(--bg-secondary);border-radius:var(--radius);padding:10px 12px;border:0.5px solid var(--border-light);}
+.doc-meta-label{font-size:10px;color:var(--text-tertiary);letter-spacing:.06em;margin-bottom:3px;}
+.doc-meta-value{font-size:12px;color:var(--text-primary);font-weight:500;line-height:1.4;}
+.conf-bar{display:flex;align-items:flex-start;gap:7px;font-size:10px;color:var(--text-tertiary);background:var(--bg-secondary);border:0.5px solid var(--border);border-radius:var(--radius);padding:6px 12px;margin-top:14px;}
+.hdr-body{display:flex;align-items:center;gap:24px;margin-top:16px;}
+.hdr-meta{flex:1;min-width:0;}
+.hdr-img{flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+
+/* SECTION */
+.section-wrap{background:var(--bg);border-radius:var(--radius-lg);padding:26px 30px;margin-bottom:14px;border:0.5px solid var(--border);}
+.section-kicker{font-size:10px;letter-spacing:.14em;color:var(--gold);font-weight:500;text-transform:uppercase;margin-bottom:10px;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(14px,2.5vw,17px);color:var(--text-primary);margin-bottom:4px;}
+.section-sub{font-size:12px;color:var(--text-tertiary);margin-bottom:18px;line-height:1.6;}
+
+/* DESIGN AXES */
+.axes-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
+.axis-card{background:var(--bg-secondary);border:0.5px solid var(--border);border-top:3px solid var(--gold);border-radius:0 0 var(--radius) var(--radius);padding:14px;}
+.axis-num{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:8px;}
+.axis-title{font-size:13px;font-weight:500;color:var(--text-primary);margin-bottom:6px;line-height:1.4;}
+.axis-desc{font-size:11.5px;color:var(--text-secondary);line-height:1.7;}
+
+/* TAGS */
+.tag{display:inline-block;font-size:10px;font-weight:500;padding:2px 8px;border-radius:20px;margin:2px 3px 2px 0;}
+.tag-gold{background:var(--gold-light);color:var(--gold-dark);}
+.tag-green{background:var(--green-bg);color:var(--green-text);}
+.tag-blue{background:var(--blue-bg);color:var(--blue-text);}
+.tag-coral{background:var(--coral-bg);color:var(--coral-text);}
+.tag-teal{background:var(--teal-bg);color:var(--teal-text);}
+.tag-purple{background:var(--purple-bg);color:var(--purple-text);}
+
+/* EV CARD */
+.ev-card{background:var(--bg-secondary);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:18px 20px;margin-bottom:14px;}
+.ev-header{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px;}
+.ev-icon{width:38px;height:38px;border-radius:8px;background:var(--gold-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ev-icon svg{width:20px;height:20px;stroke:var(--gold-dark);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.ev-h-title{font-size:13px;font-weight:500;color:var(--text-primary);margin-bottom:2px;}
+.ev-h-sub{font-size:11px;color:var(--text-tertiary);}
+.ev-body{font-size:12px;color:var(--text-secondary);line-height:1.8;}
+.ev-body strong{color:var(--text-primary);font-weight:500;}
+
+/* INGREDIENT LIST */
+.bvit-note{background:var(--bg-secondary);border:0.5px solid var(--border);border-left:3px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;padding:10px 14px;margin-top:10px;font-size:11.5px;color:var(--text-secondary);line-height:1.7;}
+.bvit-note strong{color:var(--text-primary);font-weight:500;}
+
+/* SUMMARY TABLE */
+.sum-table{width:100%;border-collapse:collapse;font-size:12px;}
+.sum-table th{background:var(--bg-secondary);text-align:left;font-weight:500;font-size:11px;color:var(--text-secondary);padding:9px 12px;border-bottom:1px solid var(--border);}
+.sum-table td{padding:9px 12px;border-bottom:0.5px solid var(--border-light);color:var(--text-secondary);vertical-align:top;line-height:1.6;}
+.sum-table tr:last-child td{border-bottom:none;}
+.sum-table td:first-child{font-weight:500;color:var(--text-primary);white-space:nowrap;}
+.sum-table td:nth-child(2){color:var(--gold-dark);font-weight:500;}
+.ref{display:inline-block;font-size:9.5px;background:var(--bg-tertiary);border:0.5px solid var(--border);border-radius:3px;padding:1px 5px;color:var(--text-tertiary);margin-left:3px;vertical-align:middle;}
+
+/* FAQ */
+.faq-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:18px;}
+.faq-stat{background:var(--bg-secondary);border-radius:var(--radius);padding:10px;text-align:center;border:0.5px solid var(--border);}
+.faq-stat-n{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--text-primary);}
+.faq-stat-l{font-size:10px;color:var(--text-tertiary);margin-top:2px;}
+.faq-cat{margin-bottom:20px;}
+.faq-cat-head{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.faq-cat-bar{width:3px;height:16px;border-radius:2px;flex-shrink:0;}
+.bar-gold{background:var(--gold);}
+.bar-blue{background:#185fa5;}
+.bar-green{background:#3b6d11;}
+.bar-coral{background:var(--coral-text);}
+.bar-teal{background:var(--teal-text);}
+.bar-purple{background:var(--purple-text);}
+.faq-cat-title{font-size:12px;font-weight:500;color:var(--text-primary);letter-spacing:.04em;}
+.faq-cat-count{font-size:10px;color:var(--text-tertiary);background:var(--bg-secondary);border:0.5px solid var(--border);border-radius:20px;padding:1px 8px;}
+.qi{border:0.5px solid var(--border);border-radius:var(--radius-lg);margin-bottom:6px;background:var(--bg);overflow:hidden;}
+.qt{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;cursor:pointer;user-select:none;transition:background .12s;}
+.qt:hover{background:var(--bg-secondary);}
+.badge{width:26px;height:26px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;margin-top:1px;}
+.b-ok{background:var(--green-bg);color:var(--green-text);}
+.b-warn{background:var(--amber-bg);color:var(--amber-text);}
+.b-info{background:var(--blue-bg);color:var(--blue-text);}
+.b-caution{background:var(--coral-bg);color:var(--coral-text);}
+.b-pro{background:var(--purple-bg);color:var(--purple-text);}
+.qt-inner{flex:1;min-width:0;}
+.qt-text{font-size:13px;font-weight:500;color:var(--text-primary);line-height:1.45;padding-top:3px;}
+.qt-row{display:flex;align-items:flex-start;gap:6px;margin-top:3px;}
+.ptag{font-size:9.5px;padding:1px 7px;border-radius:20px;font-weight:500;white-space:nowrap;}
+.ptag-pro{background:var(--purple-bg);color:var(--purple-text);}
+.ptag-gen{background:var(--green-bg);color:var(--green-text);}
+.ptag-med{background:var(--blue-bg);color:var(--blue-text);}
+.arr{width:14px;height:14px;flex-shrink:0;margin-top:5px;color:var(--text-tertiary);transition:transform .2s;}
+.qi.op .arr{transform:rotate(180deg);}
+.qa{display:none;padding:0 14px 14px 50px;}
+.qi.op .qa{display:block;}
+.qa-body{font-size:12px;color:var(--text-secondary);line-height:1.85;border-top:0.5px solid var(--border);padding-top:12px;}
+.qa-body strong{color:var(--text-primary);font-weight:500;}
+.verdict{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;margin-bottom:9px;}
+.v-ok{background:var(--green-bg);color:var(--green-text);}
+.v-cond{background:var(--amber-bg);color:var(--amber-text);}
+.v-info{background:var(--blue-bg);color:var(--blue-text);}
+.v-pro{background:var(--purple-bg);color:var(--purple-text);}
+.v-caution{background:var(--coral-bg);color:var(--coral-text);}
+
+/* PREGNANCY */
+.preg-check-table{width:100%;border-collapse:collapse;font-size:12px;margin:12px 0 18px;}
+.preg-check-table th{background:var(--bg-tertiary);text-align:left;font-weight:500;font-size:11px;color:var(--text-secondary);padding:9px 14px;border-bottom:1px solid var(--border);}
+.preg-check-table td{padding:10px 14px;border-bottom:0.5px solid var(--border-light);color:var(--text-secondary);line-height:1.5;font-size:12px;}
+.preg-check-table tr:last-child td{border-bottom:none;}
+.preg-check-table td:last-child{text-align:center;font-weight:700;font-size:12px;}
+.badge-safe{display:inline-block;padding:3px 12px;border-radius:20px;background:var(--green-bg);color:var(--green-text);font-size:11px;font-weight:700;letter-spacing:.04em;}
+.badge-caution{display:inline-block;padding:3px 12px;border-radius:20px;background:var(--amber-bg);color:var(--amber-text);font-size:11px;font-weight:700;letter-spacing:.04em;}
+.preg-disclaimer{background:var(--blue-bg);border:0.5px solid #b5d4f4;border-radius:var(--radius-lg);padding:14px 18px;margin-top:14px;font-size:12px;color:var(--blue-text);line-height:1.8;}
+
+/* CHANNEL STRATEGY */
+.ch-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.ch-card{background:var(--bg-secondary);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:16px 18px;}
+.ch-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;padding-bottom:8px;border-bottom:0.5px solid var(--border);}
+.ch-icon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ch-title{font-size:12px;font-weight:500;color:var(--text-primary);}
+.ch-sub{font-size:10px;color:var(--text-tertiary);margin-top:1px;}
+.pos-pill{display:inline-block;font-size:10px;font-weight:500;padding:3px 9px;border-radius:20px;margin-bottom:8px;}
+.ch-list{list-style:none;}
+.ch-list li{font-size:11.5px;color:var(--text-secondary);padding:4px 0;border-bottom:0.5px solid var(--border-light);line-height:1.55;display:flex;gap:7px;}
+.ch-list li:last-child{border-bottom:none;}
+.ch-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:6px;}
+.ch-list li b{color:var(--text-primary);font-weight:500;}
+.ch-msg{margin-top:8px;padding:8px 10px;border-radius:var(--radius);border-left:2px solid;font-size:11px;font-style:italic;line-height:1.5;}
+.upgrade-tag{display:inline-block;font-size:9px;font-weight:500;padding:1px 5px;border-radius:3px;background:var(--teal-bg);color:var(--teal-text);margin-left:4px;vertical-align:middle;}
+
+/* FOOTER */
+.doc-footer{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:20px 28px;margin-top:20px;}
+.doc-footer-text{font-size:10.5px;color:var(--text-tertiary);line-height:1.9;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .wrapper{padding:12px 12px 48px;}
+  .doc-header{padding:16px 14px 14px;}
+  .section-wrap{padding:16px 14px;margin-bottom:10px;}
+  .axes-grid{grid-template-columns:1fr!important;}
+  .faq-stats{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+  .ch-grid{grid-template-columns:1fr!important;}
+  [style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr 1fr!important;}
+}
+@media(max-width:480px){
+  .wrapper{padding:8px 8px 40px;}
+  .doc-header{padding:14px 12px;}
+  .section-wrap{padding:14px 12px;margin-bottom:8px;}
+  .doc-title{font-size:19px!important;}
+  .hdr-body{flex-direction:column!important;gap:12px!important;align-items:stretch!important;}
+  .hdr-img{width:100%;justify-content:center;}
+  .axes-grid{grid-template-columns:1fr!important;}
+  .ch-grid{grid-template-columns:1fr!important;}
+  .faq-stats{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+  [style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr!important;}
+  [style*="grid-template-columns:repeat(4"]{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+  .qa{padding:0 8px 10px 32px!important;}
+  .qt-text{font-size:12px!important;}
+  .qa-body{font-size:11.5px!important;}
+  .badge{width:22px!important;height:22px!important;}
+}
+@media(min-width:901px){
+  .wrapper{padding:24px 20px 60px;}
+  .doc-header{padding:32px 36px 28px;}
+  .section-wrap{padding:28px 32px;}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<div class="doc-header">
+  <div class="doc-watermark">오프라인 비공개 교육자료 — 유출 및 공유 금지<br>DR.BAE Exotokine Essence Gel · Expert Guide v1.0 · 2025</div>
+  <div class="doc-eyebrow">Dr. BAE Exotokine Skin Booster Line</div>
+  <div class="hdr-body">
+    <div class="hdr-meta">
+      <div class="doc-title">닥터배 엑소토카인 에센스겔</div>
+      <div class="doc-title-en">DR.BAE Exotokine Essence Gel — Professional Expert Guide</div>
+      <div style="margin-bottom:12px;">
+        <span class="tag tag-gold">병풀캘러스 세포외소포</span>
+        <span class="tag tag-teal">γ-PGA 발효 보습</span>
+        <span class="tag tag-coral">병풀 3대 활성 성분</span>
+        <span class="tag tag-green">100% 흡수 겔 제형</span>
+        <span class="tag tag-purple">전문가용 멀티 베이스</span>
+      </div>
+      <div class="doc-meta-grid">
+        <div class="doc-meta-item">
+          <div class="doc-meta-label">제품 분류</div>
+          <div class="doc-meta-value">에스테틱 전용 앰플 에센스겔 · 마사지/믹싱 베이스</div>
+        </div>
+        <div class="doc-meta-item">
+          <div class="doc-meta-label">핵심 원료</div>
+          <div class="doc-meta-value">병풀캘러스세포외소포 · 폴리글루타믹애씨드(γ-PGA)</div>
+        </div>
+        <div class="doc-meta-item">
+          <div class="doc-meta-label">제형 특성</div>
+          <div class="doc-meta-value">투명 겔 · 슬리피 텍스처 → 1~2분 내 100% 흡수</div>
+        </div>
+        <div class="doc-meta-item">
+          <div class="doc-meta-label">임산부 안전</div>
+          <div class="doc-meta-value">임산부 주의 성분 10대 체크리스트 전항목 FREE</div>
+        </div>
+      </div>
+    </div>
+    <div class="hdr-img">
+      <div style="width:120px;height:160px;background:linear-gradient(160deg,var(--teal-bg) 0%,var(--green-bg) 100%);border-radius:14px;display:flex;align-items:center;justify-content:center;border:0.5px solid var(--border);">
+        <div style="text-align:center;">
+          <div style="font-family:'Playfair Display',serif;font-size:11px;color:var(--teal-text);font-weight:600;letter-spacing:.08em;margin-bottom:6px;">ESSENCE</div>
+          <div style="font-family:'Playfair Display',serif;font-size:11px;color:var(--teal-text);font-weight:600;letter-spacing:.08em;margin-bottom:12px;">GEL</div>
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--teal-text)" stroke-width="1.4" stroke-linecap="round"><path d="M12 2c0 0-6 6-6 11a6 6 0 0 0 12 0c0-5-6-11-6-11z"/><path d="M9 14c0 1.657 1.343 3 3 3"/></svg>
+          <div style="font-size:9px;color:var(--teal-text);margin-top:8px;letter-spacing:.06em;">DR.BAE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="conf-bar">
+    <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><rect x="2" y="7" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 7V5a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+    <span>본 자료는 화장품 표시·광고법을 준수하여 작성되었으며, 의약품적 효능·효과를 표방하지 않습니다. 숭실대학교 의공학 연구실 · 배원규 교수 연구실 · 에스테틱 전문가 교육용</span>
+  </div>
+</div>
+
+
+<!-- ═══════════════ SECTION 01: DESIGN AXES ═══════════════ -->
+<div class="section-wrap">
+  <div class="section-kicker">01 · 포뮬레이션 설계 철학</div>
+  <div class="section-title">3대 설계 축 (Three Design Axes)</div>
+  <div class="section-sub">에센스겔의 전성분은 단순 나열이 아닌 3개의 명확한 설계 축으로 구성되어 있습니다. 각 축이 어떻게 상호 작용하는지 이해해야 이 제품의 가치를 전문가답게 전달할 수 있습니다.</div>
+  <div class="axes-grid">
+    <div class="axis-card">
+      <div class="axis-num">Ⅰ</div>
+      <div class="axis-title">식물성 EV 전달 플랫폼</div>
+      <div class="axis-desc">병풀캘러스세포외소포(Plant-derived EV)가 바이오 벡터(Bio-vector)이자 바이오 액티브로 이중 기능. 지질 이중막 나노 구조체가 피부 각질층과 친화성을 형성해 활성 성분을 세포 레벨로 전달합니다.</div>
+    </div>
+    <div class="axis-card">
+      <div class="axis-num">Ⅱ</div>
+      <div class="axis-title">γ-PGA 발효 딥-보습 시스템</div>
+      <div class="axis-desc">낫또균 유래 폴리글루타믹애씨드(γ-PGA)와 소듐하이알루로네이트의 이중 보습 구조. γ-PGA는 히알루론산보다 높은 분자량과 다중 친수성 결합으로 피부 표면 수분 유지력이 우수합니다.</div>
+    </div>
+    <div class="axis-card">
+      <div class="axis-num">Ⅲ</div>
+      <div class="axis-title">병풀 3대 트리테르페노이드 통합</div>
+      <div class="axis-desc">마데카식애씨드·아시아틱애씨드·아시아티코사이드 3종을 직접 처방. 단순 병풀 추출물이 아닌 검증된 단일 활성 성분으로 피부 컨디션 케어와 진정 기능을 뒷받침합니다.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════ SECTION 02: CORE EV ═══════════════ -->
+<div class="section-wrap">
+  <div class="section-kicker">02 · 핵심 원료 · Key Active</div>
+  <div class="section-title">병풀캘러스세포외소포 (Centella Asiatica Callus Extracellular Vesicles)</div>
+  <div class="section-sub">닥터배 식물성 세포외소포 · 천연 유래 나노 캡슐 · 진정·피부 컨디션 케어·피부장벽 강화</div>
+  <div style="margin-bottom:14px;">
+    <span class="tag tag-coral">진정 · 피부 컨디션 케어</span>
+    <span class="tag tag-teal">피부장벽 강화</span>
+    <span class="tag tag-gold">항산화 · 자유 라디칼 억제</span>
+    <span class="tag tag-purple">나노 전달 시스템</span>
+    <span class="tag tag-green">배치 균일성 보장</span>
+  </div>
+
+  <div class="ev-card">
+    <div class="ev-header">
+      <div class="ev-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><circle cx="12" cy="12" r="4"/><path d="M12 8v1M12 15v1M8 12h1M15 12h1"/></svg>
+      </div>
+      <div>
+        <div class="ev-h-title">세포외소포(EV)란 무엇인가 — 식물이 만들어 내는 천연 나노 캡슐</div>
+        <div class="ev-h-sub">30~150 nm 크기 · 지질 이중막 나노소포체 · 식물 세포가 능동적으로 분비</div>
+      </div>
+    </div>
+    <div class="ev-body">
+      세포외소포(Extracellular Vesicle, EV)는 식물 세포가 세포 간 신호 전달을 위해 스스로 만들어 분비하는 <strong>초미세 천연 나노 캡슐</strong>입니다. 지름 30~150 nm 수준의 지질 이중막 구조체로, 내부에 식물 고유의 활성 성분(폴리페놀, 플라보노이드, 단백질 등)을 그대로 담고 있습니다.<br><br>
+      일반 식물 추출물이 식물 성분을 물이나 알코올에 녹여낸 것이라면, EV는 식물 세포막과 동일한 구조를 가진 막 안에 활성 성분이 <strong>보호된 채로 포장된 상태</strong>라는 점에서 다릅니다. 이 지질 이중막 구조 덕분에 피부의 각질층과 높은 친화성을 가지며, 단순 수용성 성분보다 피부 흡수 효율이 우수합니다.
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:14px;">
+    <div style="background:var(--bg-secondary);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:16px 18px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+        <div style="width:32px;height:32px;background:var(--gold-light);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-dark)" stroke-width="1.8" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div style="font-size:13px;font-weight:500;color:var(--text-primary);">① 왜 병풀(Centella Asiatica)인가</div>
+      </div>
+      <div style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+        병풀은 아시아 전통 의학에서 수천 년간 피부 진정에 사용되어 온 식물입니다. 아시아티코사이드·마데카식애씨드·아시아틱애씨드로 대표되는 트리테르페노이드 계열 성분이 <strong>피부 진정과 피부 컨디션 케어</strong>에 기여한다는 사실은 화장품 원료학에서 오래 확립된 근거입니다.<br><br>
+        에센스겔은 단순 추출물이 아닌 <strong>EV(나노 캡슐) 형태 + 단일 활성 성분 직접 처방</strong>으로, 병풀의 효능을 이중으로 설계했습니다.
+      </div>
+    </div>
+    <div style="background:var(--bg-secondary);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:16px 18px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+        <div style="width:32px;height:32px;background:var(--teal-bg);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal-text)" stroke-width="1.8" stroke-linecap="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg>
+        </div>
+        <div style="font-size:13px;font-weight:500;color:var(--text-primary);">② 왜 캘러스(조직배양) 유래인가</div>
+      </div>
+      <div style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+        <strong>캘러스(Callus)</strong>란 식물의 조직을 무균 환경에서 배양한 미분화 세포 덩어리입니다. 야생 수확 식물은 계절·산지에 따라 성분 함량이 변동되지만, 캘러스 배양은 <strong>통제된 환경에서 균일한 품질</strong>을 반복 생산합니다.<br><br>
+        에스테틱·클리닉 현장에서 동일한 경험을 매 관리마다 기대할 수 있는 이유가 바로 이 재현성입니다.
+      </div>
+    </div>
+    <div style="background:var(--bg-secondary);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:16px 18px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+        <div style="width:32px;height:32px;background:var(--blue-bg);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue-text)" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div style="font-size:13px;font-weight:500;color:var(--text-primary);">③ 에센스겔 제형에서의 EV 역할</div>
+      </div>
+      <div style="font-size:12px;color:var(--text-secondary);line-height:1.8;">
+        EV의 지질 이중막은 피부 각질층의 세포간 지질(Intercellular lipid)과 구조가 유사해 피부 친화성이 높습니다. 에센스겔의 겔 제형은 EV를 균일하게 분산·보호하며, <strong>롤링 과정 중 마찰에 의한 EV 파괴를 최소화</strong>하도록 설계된 폴리올 시스템이 함께 배합되어 있습니다.
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--bg-secondary);border:0.5px solid var(--border);border-left:3px solid var(--gold);border-radius:0 var(--radius-lg) var(--radius-lg) 0;padding:14px 18px;">
+    <div style="font-size:12px;font-weight:500;color:var(--text-primary);margin-bottom:10px;">▎ 병풀 추출물 vs 병풀캘러스세포외소포(EV) vs 에센스겔 설계 — 무엇이 다른가</div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;font-size:11.5px;">
+      <div>
+        <div style="font-weight:500;color:var(--text-secondary);margin-bottom:5px;">일반 병풀 추출물</div>
+        <div style="color:var(--text-tertiary);line-height:1.8;">· 수용성 성분 위주 추출<br>· 각질층 투과 제한적<br>· 계절·산지에 따라 성분 차이<br>· 피부 표면에서 작용</div>
+      </div>
+      <div>
+        <div style="font-weight:500;color:var(--gold-dark);margin-bottom:5px;">병풀캘러스세포외소포 단독</div>
+        <div style="color:var(--text-secondary);line-height:1.8;">· 지질 이중막 캡슐 → 피부 친화성↑<br>· 나노 사이즈 각질층 침투↑<br>· 무균 조직배양 균일한 품질<br>· 전달체 + 활성 물질 이중 역할</div>
+      </div>
+      <div>
+        <div style="font-weight:500;color:var(--teal-text);margin-bottom:5px;">에센스겔 — 3중 병풀 설계</div>
+        <div style="color:var(--text-secondary);line-height:1.8;">· EV + 마데카식애씨드 직접 처방<br>· + 아시아틱애씨드 직접 처방<br>· + 아시아티코사이드 직접 처방<br>· EV + 3대 트리테르페노이드 통합</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════ SECTION 02-B: FORMULATION ═══════════════ -->
+<div class="section-wrap">
+  <div class="section-kicker">02-B · 제형 설계</div>
+  <div class="section-title">100% 흡수 겔 메커니즘 — 슬리피에서 흡수까지</div>
+  <div class="section-sub">에센스겔의 제형적 특성은 단순한 사용감 설계가 아닌, 에스테틱 전문가가 다목적으로 활용할 수 있도록 의도된 기술 설계입니다.</div>
+
+  <div class="bvit-note" style="margin-bottom:14px;">에센스겔은 도포 직후 <strong>매우 미끈하고 슬리피(Slippy)한 텍스처</strong>를 가지며, 1~2분 롤링/마사지 후 피부에 <strong>100% 흡수되어 아무것도 남지 않습니다</strong>. 이 제형적 특성이 전문가용 다목적 베이스로서의 핵심 가치입니다.</div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:14px;">
+    <div class="ev-card" style="margin-bottom:0;">
+      <div class="ev-header">
+        <div class="ev-icon" style="background:var(--teal-bg);">
+          <svg viewBox="0 0 24 24" style="stroke:var(--teal-text);"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12h8M12 8v8"/></svg>
+        </div>
+        <div>
+          <div class="ev-h-title">① 점증제 시스템</div>
+          <div class="ev-h-sub">암모늄아크릴로일다이메틸타우레이트/VP코폴리머 + 아크릴레이트크로스폴리머</div>
+        </div>
+      </div>
+      <div class="ev-body">두 종류의 점증제가 결합하여 도포 초기의 <strong>슬리피·광택 있는 겔 텍스처</strong>를 구현합니다. 이 점증제 시스템은 유분을 전혀 함유하지 않아 오일프리 특성을 유지하면서도 우수한 롤링감을 제공합니다.</div>
+    </div>
+    <div class="ev-card" style="margin-bottom:0;">
+      <div class="ev-header">
+        <div class="ev-icon" style="background:var(--blue-bg);">
+          <svg viewBox="0 0 24 24" style="stroke:var(--blue-text);"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"/><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"/></svg>
+        </div>
+        <div>
+          <div class="ev-h-title">② 흡수 메커니즘</div>
+          <div class="ev-h-sub">마찰→점증제 망상 구조 붕괴→수분 피부 침투</div>
+        </div>
+      </div>
+      <div class="ev-body">롤링/마사지 동작으로 가해지는 <strong>물리적 전단력(Shear force)</strong>이 점증제의 가교 구조를 점진적으로 해소시킵니다. 동시에 글리세린·소듐하이알루로네이트·γ-PGA가 피부로 흡수되면서 잔여물 없이 사라집니다.</div>
+    </div>
+    <div class="ev-card" style="margin-bottom:0;">
+      <div class="ev-header">
+        <div class="ev-icon" style="background:var(--green-bg);">
+          <svg viewBox="0 0 24 24" style="stroke:var(--green-text);"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div>
+          <div class="ev-h-title">③ 전문가용 다목적 활용</div>
+          <div class="ev-h-sub">마사지 베이스 · 믹싱 베이스 · 홈케어 에센스</div>
+        </div>
+      </div>
+      <div class="ev-body">100% 흡수 후 잔여물이 없기 때문에 <strong>여러 번 덧발라도 밀리거나 끈적이지 않습니다.</strong> 다른 앰플·보습제와 혼합해 점도를 조정하는 믹싱 베이스로도 활용 가능하며, 샵에서 가장 유연하게 쓸 수 있는 기본 필수 아이템입니다.</div>
+    </div>
+  </div>
+
+  <!-- Usage matrix -->
+  <div style="font-size:10px;letter-spacing:.12em;color:var(--gold);font-weight:500;margin-bottom:10px;">에센스겔 활용 매트릭스</div>
+  <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
+    <table class="sum-table">
+      <thead><tr>
+        <th style="width:20%">활용 방식</th>
+        <th style="width:30%">사용 목적</th>
+        <th style="width:25%">적합 채널</th>
+        <th style="width:25%">핵심 포인트</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td>마사지 베이스</td>
+          <td style="color:var(--text-secondary);font-weight:400;">얼굴·목·데콜테 롤링 관리 시 슬라이딩 매체</td>
+          <td style="color:var(--text-secondary);font-weight:400;">전통 스파·메디컬 에스테틱</td>
+          <td style="color:var(--text-secondary);font-weight:400;">여러 번 덧발라도 밀림 없음</td>
+        </tr>
+        <tr>
+          <td>믹싱 베이스</td>
+          <td style="color:var(--text-secondary);font-weight:400;">다른 앰플·보습제와 혼합해 점도·흡수감 조정</td>
+          <td style="color:var(--text-secondary);font-weight:400;">전문 관리실 전체</td>
+          <td style="color:var(--text-secondary);font-weight:400;">수용성 성분과 혼합 안정성 우수</td>
+        </tr>
+        <tr>
+          <td>포스트-케어 에센스</td>
+          <td style="color:var(--text-secondary);font-weight:400;">레이저·MTS 등 시술 후 피부 진정 에센스</td>
+          <td style="color:var(--text-secondary);font-weight:400;">메디컬 에스테틱</td>
+          <td style="color:var(--text-secondary);font-weight:400;">시술 후 금기 성분 미포함</td>
+        </tr>
+        <tr>
+          <td>홈케어 에센스</td>
+          <td style="color:var(--text-secondary);font-weight:400;">세안 후 수분크림 전 단계 기능성 에센스</td>
+          <td style="color:var(--text-secondary);font-weight:400;">홈케어 루틴</td>
+          <td style="color:var(--text-secondary);font-weight:400;">올인원 아님 → 크림 추가 필요</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="margin-top:8px;padding:8px 12px;background:var(--amber-bg);border-radius:var(--radius);font-size:11px;color:var(--amber-text);line-height:1.7;">
+    <strong>홈케어 안내 필수사항:</strong> 에센스겔은 100% 흡수 제형으로 올인원 제품이 아닙니다. 흡수 후 수분감을 원한다면 수분크림, 풍부한 보호막을 원한다면 리치크림을 이어서 사용해야 합니다. 이 점을 고객에게 명확히 안내하는 것이 전문가 신뢰도 구축의 핵심입니다.
+  </div>
+</div>
+
+
+<!-- ═══════════════ SECTION 03: CENTELLA 3-ACTIVES ═══════════════ -->
+<div class="section-wrap">
+  <div class="section-kicker">03 · 병풀 3대 활성 성분</div>
+  <div class="section-title">마데카식애씨드 · 아시아틱애씨드 · 아시아티코사이드</div>
+  <div class="section-sub">에센스겔에는 병풀 추출물이 아닌 검증된 단일 활성 성분 3종이 직접 처방되어 있습니다. 이는 추출물 대비 성분 함량의 정확성과 일관성을 보장합니다.</div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:14px;">
+    <div style="background:var(--bg-secondary);border:0.5px solid var(--border);border-top:3px solid #993c1d;border-radius:0 0 var(--radius-lg) var(--radius-lg);padding:16px;">
+      <div style="font-family:'Playfair Display',serif;font-size:13px;font-weight:600;color:var(--coral-text);margin-bottom:4px;">마데카식애씨드</div>
+      <div style="font-size:10px;color:var(--text-tertiary);margin-bottom:8px;">Madecassic Acid · 트리테르페노이드 계열</div>
+      <div style="font-size:11.5px;color:var(--text-secondary);line-height:1.75;">
+        병풀의 대표 활성 성분 중 하나. 피부 컨디션 케어에 기여하는 것으로 알려져 있으며, 다수의 임산부 안전 스킨케어 가이드에 포함되는 성분입니다. CIR(화장품성분안전성심사위원회)에서 안전 판정을 받은 성분입니다.
+      </div>
+      <div style="margin-top:8px;font-size:10px;background:var(--coral-bg);color:var(--coral-text);border-radius:var(--radius);padding:5px 8px;line-height:1.5;">에스테틱 업계 포스트-케어 대표 원료 중 하나</div>
+    </div>
+    <div style="background:var(--bg-secondary);border:0.5px solid var(--border);border-top:3px solid var(--teal-text);border-radius:0 0 var(--radius-lg) var(--radius-lg);padding:16px;">
+      <div style="font-family:'Playfair Display',serif;font-size:13px;font-weight:600;color:var(--teal-text);margin-bottom:4px;">아시아틱애씨드</div>
+      <div style="font-size:10px;color:var(--text-tertiary);margin-bottom:8px;">Asiatic Acid · 트리테르페노이드 계열</div>
+      <div style="font-size:11.5px;color:var(--text-secondary);line-height:1.75;">
+        마데카식애씨드와 동일 계열의 트리테르페노이드 성분. 병풀의 주요 활성 성분 복합체를 구성하며, 피부 컨디션 케어와 관련된 연구에서 함께 언급됩니다. 외용 화장품 농도에서 안전 판정이 확립되어 있습니다.
+      </div>
+      <div style="margin-top:8px;font-size:10px;background:var(--teal-bg);color:var(--teal-text);border-radius:var(--radius);padding:5px 8px;line-height:1.5;">병풀 트리테르페노이드 복합체의 핵심 구성 성분</div>
+    </div>
+    <div style="background:var(--bg-secondary);border:0.5px solid var(--border);border-top:3px solid var(--gold);border-radius:0 0 var(--radius-lg) var(--radius-lg);padding:16px;">
+      <div style="font-family:'Playfair Display',serif;font-size:13px;font-weight:600;color:var(--gold-dark);margin-bottom:4px;">아시아티코사이드</div>
+      <div style="font-size:10px;color:var(--text-tertiary);margin-bottom:8px;">Asiaticoside · 트리테르페노이드 배당체</div>
+      <div style="font-size:11.5px;color:var(--text-secondary);line-height:1.75;">
+        아시아틱애씨드와 당(糖)이 결합한 배당체 형태. 수용성이 상대적으로 높아 제형 내 분산이 용이합니다. 병풀 관련 화장품 성분 연구에서 마데카식애씨드·아시아틱애씨드와 함께 트리오(trio)로 다뤄집니다.
+      </div>
+      <div style="margin-top:8px;font-size:10px;background:var(--gold-light);color:var(--gold-dark);border-radius:var(--radius);padding:5px 8px;line-height:1.5;">수용성↑ 제형 내 분산성 우수</div>
+    </div>
+  </div>
+
+  <div style="background:var(--bg-secondary);border:0.5px solid var(--border);border-left:3px solid var(--teal-text);border-radius:0 var(--radius-lg) var(--radius-lg) 0;padding:14px 18px;">
+    <div style="font-size:12px;font-weight:500;color:var(--text-primary);margin-bottom:8px;">▎ 왜 "추출물"이 아닌 "단일 성분 직접 처방"인가</div>
+    <div style="font-size:11.5px;color:var(--text-secondary);line-height:1.8;">
+      일반적인 병풀 추출물(Centella Asiatica Extract)은 위 3종 성분을 포함한 다양한 화합물의 혼합물로, 배치(batch)마다 각 성분의 정확한 함량이 달라질 수 있습니다. 반면 에센스겔은 마데카식애씨드, 아시아틱애씨드, 아시아티코사이드를 각각 별도 원료로 처방함으로써 <strong>성분 함량의 정확성과 배치 간 재현성</strong>을 확보합니다. 이 점이 전문가에게 설명할 수 있는 명확한 기술적 차별점입니다.
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════ SECTION 04: γ-PGA ═══════════════ -->
+<div class="section-wrap">
+  <div class="section-kicker">04 · 보습 시스템</div>
+  <div class="section-title">폴리글루타믹애씨드(γ-PGA) — 낫또 유래 차세대 보습 성분</div>
+  <div class="section-sub">히알루론산(HA)과 함께 이중 보습 구조를 형성하는 발효 유래 성분. γ-PGA의 차별적 특성을 이해하면 전문가 상담에서 강력한 설득력을 갖습니다.</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+    <div style="background:var(--bg-secondary);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:16px 18px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+        <div style="width:30px;height:30px;background:var(--green-bg);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--green-text)" stroke-width="1.8" stroke-linecap="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div style="font-size:12px;font-weight:500;color:var(--text-primary);">폴리글루타믹애씨드(γ-PGA)란</div>
+      </div>
+      <div style="font-size:11.5px;color:var(--text-secondary);line-height:1.8;">
+        γ-PGA(Poly-γ-glutamic Acid)는 <strong>낫또균(Bacillus subtilis natto)이 발효 과정에서 생성하는 천연 고분자 아미노산 중합체</strong>입니다. 낫또의 끈적한 실을 형성하는 주성분이기도 합니다.<br><br>
+        글루탐산(Glutamic Acid) 단위체가 수백~수천 개 연결된 구조로, 분자 내 다수의 카르복실기(-COOH)가 수분을 결합·보유하는 능력을 가집니다.
+      </div>
+    </div>
+    <div style="background:var(--bg-secondary);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:16px 18px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+        <div style="width:30px;height:30px;background:var(--blue-bg);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--blue-text)" stroke-width="1.8" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div style="font-size:12px;font-weight:500;color:var(--text-primary);">γ-PGA의 차별적 특성</div>
+      </div>
+      <div style="font-size:11.5px;color:var(--text-secondary);line-height:1.8;">
+        <strong>① 높은 수분 보유력:</strong> 자체 중량 대비 수백 배의 수분을 결합 가능한 것으로 알려져 있습니다.<br><br>
+        <strong>② 지속성:</strong> 고분자 구조로 인해 피부 표면에서 수분을 장시간 보유합니다.<br><br>
+        <strong>③ 피부 친화성:</strong> 아미노산 계열 천연 발효 성분으로 피부와의 생체친화성이 높습니다.
+      </div>
+    </div>
+  </div>
+
+  <!-- γ-PGA vs HA comparison -->
+  <div style="font-size:10px;letter-spacing:.12em;color:var(--gold);font-weight:500;margin-bottom:10px;">γ-PGA vs 히알루론산 — 전문가 상담 비교 포인트</div>
+  <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:12px;">
+    <table class="sum-table">
+      <thead><tr>
+        <th style="width:22%">비교 항목</th>
+        <th style="width:39%">폴리글루타믹애씨드 (γ-PGA)</th>
+        <th style="width:39%">소듐하이알루로네이트 (HA)</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td>원료 기원</td>
+          <td>낫또균 발효 유래 아미노산 중합체</td>
+          <td>발효 또는 동물 유래 다당류</td>
+        </tr>
+        <tr>
+          <td>구조적 특성</td>
+          <td>다중 카르복실기(-COOH) 아미노산 사슬</td>
+          <td>글루쿠론산-GlcNAc 반복 다당류</td>
+        </tr>
+        <tr>
+          <td>보습 메커니즘</td>
+          <td>카르복실기에 의한 수분 결합 + 피막 형성</td>
+          <td>주변 수분 흡인 (Hygroscopic) + 피막</td>
+        </tr>
+        <tr>
+          <td>에센스겔 내 역할</td>
+          <td>피부 표면 보습막 + 활성 성분 전달 보조</td>
+          <td>피부 수분 보충 · 보습 시너지</td>
+        </tr>
+        <tr>
+          <td>임산부 안전성</td>
+          <td style="color:var(--green-text);font-weight:500;">일반적으로 안전 — EWG 낮은 위험 등급</td>
+          <td style="color:var(--green-text);font-weight:500;">대표적 임산부 안전 성분</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="background:var(--green-bg);border:0.5px solid #c0dd97;border-radius:var(--radius);padding:10px 14px;font-size:11.5px;color:var(--green-text);line-height:1.7;">
+    <strong>전문가 상담 포인트:</strong> 에센스겔은 γ-PGA + 소듐하이알루로네이트 + 글리세린의 3중 보습 구조를 채택했습니다. 각각 다른 메커니즘으로 작동하므로 단일 성분보다 폭넓고 지속적인 피부 수분 유지가 가능합니다.
+  </div>
+</div>
+
+
+<!-- ═══════════════ SECTION 05: APPLICATION PROTOCOL ═══════════════ -->
+<div class="section-wrap">
+  <div class="section-kicker">05 · 사용법 · 적용 프로토콜</div>
+  <div class="section-title">채널별 적용 프로토콜 가이드</div>
+  <div class="section-sub">에센스겔은 사용 목적에 따라 3가지 방식으로 적용할 수 있습니다. 각 채널에 맞는 프로토콜을 이해하고 고객에게 안내하세요.</div>
+
+  <!-- Protocol steps: clinic -->
+  <div style="background:var(--teal-bg);border:0.5px solid #9fe1cb;border-radius:var(--radius-lg);padding:16px 18px;margin-bottom:12px;">
+    <div style="font-size:12px;font-weight:500;color:var(--teal-text);margin-bottom:10px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="display:inline;vertical-align:middle;margin-right:5px;"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      클리닉 · 메디컬 에스테틱 적용 프로토콜
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;">
+      <div style="background:var(--bg);border-radius:var(--radius);padding:10px 12px;">
+        <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--teal-text);line-height:1;">Step 1</div>
+        <div style="font-size:11px;font-weight:500;color:var(--text-primary);margin:4px 0 2px;">클렌징 완료</div>
+        <div style="font-size:10.5px;color:var(--text-tertiary);line-height:1.5;">피부 pH 회복 후 적용. 시술 후라면 진정 쿨링 처치 완료 상태</div>
+      </div>
+      <div style="background:var(--bg);border-radius:var(--radius);padding:10px 12px;">
+        <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--teal-text);line-height:1;">Step 2</div>
+        <div style="font-size:11px;font-weight:500;color:var(--text-primary);margin:4px 0 2px;">에센스겔 도포</div>
+        <div style="font-size:10.5px;color:var(--text-tertiary);line-height:1.5;">적정량을 얼굴·목·데콜테에 균일 도포. 초기 슬리피 텍스처 확인</div>
+      </div>
+      <div style="background:var(--bg);border-radius:var(--radius);padding:10px 12px;">
+        <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--teal-text);line-height:1;">Step 3</div>
+        <div style="font-size:11px;font-weight:500;color:var(--text-primary);margin:4px 0 2px;">1~2분 롤링·마사지</div>
+        <div style="font-size:10.5px;color:var(--text-tertiary);line-height:1.5;">부드러운 원형 마사지. 필요시 겔 추가 도포 반복 가능 (밀림 없음)</div>
+      </div>
+      <div style="background:var(--bg);border-radius:var(--radius);padding:10px 12px;">
+        <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--teal-text);line-height:1;">Step 4</div>
+        <div style="font-size:11px;font-weight:500;color:var(--text-primary);margin:4px 0 2px;">완전 흡수 확인 후</div>
+        <div style="font-size:10.5px;color:var(--text-tertiary);line-height:1.5;">다음 단계 진행. 마이크로젝션 어플리케이터 병용 가능</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Home care protocol -->
+  <div style="background:var(--amber-bg);border:0.5px solid #f5d08a;border-radius:var(--radius-lg);padding:16px 18px;margin-bottom:12px;">
+    <div style="font-size:12px;font-weight:500;color:var(--amber-text);margin-bottom:10px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="display:inline;vertical-align:middle;margin-right:5px;"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+      홈케어 루틴 — 고객 안내 3단계
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;">
+      <div style="background:var(--bg);border-radius:var(--radius);padding:10px 12px;">
+        <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--amber-text);line-height:1;">Step 1</div>
+        <div style="font-size:11px;font-weight:500;color:var(--text-primary);margin:4px 0 2px;">세안 후 토너/스킨</div>
+        <div style="font-size:10.5px;color:var(--text-tertiary);line-height:1.5;">기본 피부 정돈 후 에센스겔 적용 준비</div>
+      </div>
+      <div style="background:var(--bg);border-radius:var(--radius);padding:10px 12px;">
+        <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--amber-text);line-height:1;">Step 2</div>
+        <div style="font-size:11px;font-weight:500;color:var(--text-primary);margin:4px 0 2px;">에센스겔 롤링·흡수</div>
+        <div style="font-size:10.5px;color:var(--text-tertiary);line-height:1.5;">적당량 도포 후 1~2분 부드럽게 롤링. 완전 흡수 확인</div>
+      </div>
+      <div style="background:var(--bg);border-radius:var(--radius);padding:10px 12px;">
+        <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--amber-text);line-height:1;">Step 3</div>
+        <div style="font-size:11px;font-weight:500;color:var(--text-primary);margin:4px 0 2px;">피부 타입별 크림</div>
+        <div style="font-size:10.5px;color:var(--text-tertiary);line-height:1.5;">수분 중심 → 수분크림 / 보호막 필요 → 리치크림 선택</div>
+      </div>
+    </div>
+    <div style="margin-top:8px;font-size:11px;color:var(--amber-text);line-height:1.6;">※ 에센스겔은 100% 흡수 제형으로 올인원 제품이 아닙니다. 반드시 보습 마무리 크림을 이어서 사용하도록 안내하세요.</div>
+  </div>
+
+  <!-- Mixing base tips -->
+  <div style="background:var(--bg-secondary);border:0.5px solid var(--border);border-left:3px solid var(--gold);border-radius:0 var(--radius-lg) var(--radius-lg) 0;padding:14px 18px;">
+    <div style="font-size:12px;font-weight:500;color:var(--text-primary);margin-bottom:8px;">▎ 믹싱 베이스 활용 팁 — 전문가 실무 가이드</div>
+    <div style="font-size:11.5px;color:var(--text-secondary);line-height:1.8;">
+      에센스겔의 수용성 점증제 시스템은 대부분의 <strong>수용성 앰플류와 안정적으로 혼합</strong>됩니다. 다른 보습 앰플 또는 진정 성분 앰플과 혼합하면 점도를 높여 도포 편의성을 증가시키면서도 각 제품의 활성 성분을 동시에 피부에 전달할 수 있습니다.<br><br>
+      <strong>주의사항:</strong> 칼슘 이온(Ca²⁺)을 다량 함유한 성분(예: 칼슘 판토테네이트 고함량 분말형 제품)과 혼합 시, 카보머 계열 점증제의 점도 저하가 발생할 수 있으므로 사전 소량 테스트를 권장합니다. 닥터배 칼리 파우더 스킨부스터와 직접 믹싱은 피하고, 순서를 분리하여 사용하십시오.
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════ SECTION 06: CHANNEL STRATEGY ═══════════════ -->
+<div class="section-wrap">
+  <div class="section-kicker">06 · 채널별 홍보 전략</div>
+  <div class="section-title">4개 채널 맞춤 포지셔닝 전략</div>
+  <div class="section-sub">에센스겔의 성분·제형 특성과 임산부 안전성 데이터를 채널별로 최적화하여 활용하는 전략입니다. 모든 표현은 화장품 표시·광고법을 준수합니다.</div>
+
+  <div class="ch-grid">
+    <div class="ch-card">
+      <div class="ch-head">
+        <div class="ch-icon" style="background:var(--teal-bg);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal-text)" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
+        <div>
+          <div class="ch-title">전통 에스테틱 스파</div>
+          <div class="ch-sub">관리 품질 향상 · 임산부 고객 서비스 확장</div>
+        </div>
+      </div>
+      <span class="pos-pill" style="background:var(--teal-bg);color:var(--teal-text);">포지셔닝: 샵 기본 필수템 + 임산부 관리 베이스</span>
+      <ul class="ch-list">
+        <li><span class="ch-dot" style="background:#1D9E75;"></span><span><b>마사지 퀄리티 향상</b> — 슬리피 텍스처로 롤링·마사지 효율↑. 데콜테·목·얼굴 연속 관리</span></li>
+        <li><span class="ch-dot" style="background:#1D9E75;"></span><span><b>임산부 전용 코스 설계 가능 <span class="upgrade-tag">신규</span></b> — 10대 주의 성분 FREE 근거로 임산부 고객 관리 메뉴 확장</span></li>
+        <li><span class="ch-dot" style="background:#1D9E75;"></span><span><b>체크리스트 카드 활용</b> — 상담 시 성분 체크리스트 직접 제시. 불안 해소 즉시 가능</span></li>
+        <li><span class="ch-dot" style="background:#1D9E75;"></span><span><b>홈케어 연결 판매</b> — "오늘 관리에서 사용한 바로 그 겔" 경험 기반 판매</span></li>
+      </ul>
+      <div class="ch-msg" style="background:var(--teal-bg);border-color:#1D9E75;color:var(--teal-text);">"임산부 고객도 안심하고 받을 수 있는 전문 에센스겔 관리"</div>
+    </div>
+
+    <div class="ch-card">
+      <div class="ch-head">
+        <div class="ch-icon" style="background:var(--blue-bg);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue-text)" stroke-width="1.8" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div>
+          <div class="ch-title">메디컬 에스테틱</div>
+          <div class="ch-sub">시술 후 포스트-케어 · 전문가 신뢰도</div>
+        </div>
+      </div>
+      <span class="pos-pill" style="background:var(--blue-bg);color:var(--blue-text);">포지셔닝: 시술 후 성분 검증된 세포외소포 에센스</span>
+      <ul class="ch-list">
+        <li><span class="ch-dot" style="background:#378ADD;"></span><span><b>시술 후 금기 성분 전부 미포함</b> — 레티놀·살리실산·AHA 고농도 등 시술 후 금기 성분 없음. 전문가 신뢰도↑</span></li>
+        <li><span class="ch-dot" style="background:#378ADD;"></span><span><b>병풀 3대 활성 성분 실처방</b> — 마데카식애씨드·아시아틱애씨드·아시아티코사이드 직접 처방. 포스트-케어 소구</span></li>
+        <li><span class="ch-dot" style="background:#378ADD;"></span><span><b>마이크로젝션 연계</b> — 배원규 교수 연구실 비침습 경피전달 기기와 함께 사용 프로토콜 제안</span></li>
+        <li><span class="ch-dot" style="background:#378ADD;"></span><span><b>법적 표현 준수</b> — '진정', '피부 컨디션 케어' 사용. 재생·치료·항염 전면 배제</span></li>
+      </ul>
+      <div class="ch-msg" style="background:var(--blue-bg);border-color:#378ADD;color:var(--blue-text);">"시술 후 금기 성분 없음 — 숭실대 의공학 연구실 기반 포스트-케어"</div>
+    </div>
+
+    <div class="ch-card">
+      <div class="ch-head">
+        <div class="ch-icon" style="background:var(--green-bg);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green-text)" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="ch-title">여드름·문제성 피부</div>
+          <div class="ch-sub">저자극·성분 투명성 소구 채널</div>
+        </div>
+      </div>
+      <span class="pos-pill" style="background:var(--green-bg);color:var(--green-text);">포지셔닝: 오일프리 + 성분 검증된 저자극 진정 겔</span>
+      <ul class="ch-list">
+        <li><span class="ch-dot" style="background:#639922;"></span><span><b>오일프리 겔 제형</b> — 유분 성분 없음. 100% 흡수 후 피막감 없음. 모공 친화적</span></li>
+        <li><span class="ch-dot" style="background:#639922;"></span><span><b>무파라벤 방부 시스템</b> — 1,2-헥산다이올 + 에틸헥실글리세린 조합. 파라벤 FREE 명시 가능</span></li>
+        <li><span class="ch-dot" style="background:#639922;"></span><span><b>10대 주의 성분 체크리스트 활용</b> — 성분 예민 고객 상담 도구로 직접 제시. 즉각 설득</span></li>
+        <li><span class="ch-dot" style="background:#639922;"></span><span><b>향료 선제 고지</b> — 향료 함유, 극도 민감 고객 패치 테스트 권장. 솔직함이 신뢰를 만든다</span></li>
+      </ul>
+      <div class="ch-msg" style="background:var(--green-bg);border-color:#639922;color:var(--green-text);">"성분표를 직접 검색하는 고객이 선택하는 저자극 세포외소포 겔"</div>
+    </div>
+
+    <div class="ch-card">
+      <div class="ch-head">
+        <div class="ch-icon" style="background:var(--amber-bg);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--amber-text)" stroke-width="1.8" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div>
+          <div class="ch-title">홈케어 루틴</div>
+          <div class="ch-sub">소비자 직접 판매 · 성분 신뢰 콘텐츠</div>
+        </div>
+      </div>
+      <span class="pos-pill" style="background:var(--amber-bg);color:var(--amber-text);">포지셔닝: 전문가 루틴 + 성분 공부한 소비자 선택</span>
+      <ul class="ch-list">
+        <li><span class="ch-dot" style="background:#BA7517;"></span><span><b>"올인원 아님"을 강점으로</b> — "전문가처럼 레이어링하는 스킨케어"로 고급 경험 제공</span></li>
+        <li><span class="ch-dot" style="background:#BA7517;"></span><span><b>성분 인포그래픽 콘텐츠</b> — 10대 주의 성분 FREE 체크 이미지를 상세페이지·숏폼 콘텐츠 활용</span></li>
+        <li><span class="ch-dot" style="background:#BA7517;"></span><span><b>텍스처 영상 콘텐츠</b> — "흡수되는 겔" 비포·애프터 SNS 숏폼. 강력한 바이럴 소재</span></li>
+        <li><span class="ch-dot" style="background:#BA7517;"></span><span><b>임산부 타깃 홈케어 소구 <span class="upgrade-tag">신규</span></b> — "임산부 주의 성분 10대 FREE" 검색 유입 확보. 고가치 세그먼트</span></li>
+      </ul>
+      <div class="ch-msg" style="background:var(--amber-bg);border-color:#BA7517;color:var(--amber-text);">"성분을 공부한 소비자가, 직접 확인하고 선택하는 에센스겔"</div>
+    </div>
+  </div>
+
+  <!-- Expression guidelines -->
+  <div style="margin-top:14px;border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
+    <table class="sum-table">
+      <thead><tr>
+        <th>채널</th>
+        <th>권장 표현 키워드</th>
+        <th>반드시 피해야 할 표현</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td>전통 스파</td>
+          <td style="color:var(--green-text);font-weight:500;">진정 · 피부 컨디션 케어 · 세포외소포 · 임산부 주의 성분 없음</td>
+          <td style="color:var(--coral-text);font-weight:500;">치료 · 재생 · 임산부 안전 제품 (단정)</td>
+        </tr>
+        <tr>
+          <td>메디컬</td>
+          <td style="color:var(--green-text);font-weight:500;">포스트-케어 · 피부 컨디션 · 병풀캘러스 EV · 진정</td>
+          <td style="color:var(--coral-text);font-weight:500;">재생 · 치유 · 항염 · 스킨 리쥬비네이션</td>
+        </tr>
+        <tr>
+          <td>여드름·문제성</td>
+          <td style="color:var(--green-text);font-weight:500;">진정 · 오일프리 · 무파라벤 · 저자극 · 10대 성분 FREE</td>
+          <td style="color:var(--coral-text);font-weight:500;">여드름 치료 · 피지 제거 · 모공 수축</td>
+        </tr>
+        <tr>
+          <td>홈케어</td>
+          <td style="color:var(--green-text);font-weight:500;">주의 성분 FREE · 전문가 루틴 · 세포외소포 · γ-PGA 보습</td>
+          <td style="color:var(--coral-text);font-weight:500;">임산부 전용 · 태아 안전 · 임산부 사용 가능 (단정)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- ═══════════════ SECTION 07: PREGNANCY SAFETY ═══════════════ -->
+<div class="section-wrap">
+  <div class="section-kicker">07 · 임산부 안전성</div>
+  <div class="section-title">임산부 주의 성분 10대 체크리스트 — 전항목 FREE</div>
+  <div class="section-sub">전성분 직접 대조 + 향료 내 프탈레이트 제조사 공식 확인 완료. 이 데이터는 채널 전체에서 활용 가능한 핵심 신뢰 자산입니다.</div>
+
+  <table class="preg-check-table">
+    <thead><tr>
+      <th style="width:28%">임산부 주의 성분</th>
+      <th style="width:50%">주의 이유 (요약)</th>
+      <th style="width:22%">에센스겔 포함 여부</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td>레티놀 / 레티노이드 계열</td>
+        <td>고용량 경구 섭취 시 태아 기형 유발 가능성 확립 — 외용도 임신 중 기피 권장</td>
+        <td><span class="badge-safe">✓ 미포함</span></td>
+      </tr>
+      <tr>
+        <td>살리실산(BHA) 고농도</td>
+        <td>고농도·광범위 도포 시 아스피린 유사 전신 흡수 우려</td>
+        <td><span class="badge-safe">✓ 미포함</span></td>
+      </tr>
+      <tr>
+        <td>하이드로퀴논</td>
+        <td>높은 경피 흡수율 · 태아 안전성 데이터 부족</td>
+        <td><span class="badge-safe">✓ 미포함</span></td>
+      </tr>
+      <tr>
+        <td>벤조일퍼옥사이드</td>
+        <td>산화제 · 임신 중 여드름 치료에 제한적 사용 권장</td>
+        <td><span class="badge-safe">✓ 미포함</span></td>
+      </tr>
+      <tr>
+        <td>AHA 고농도 (필링용)</td>
+        <td>고농도 각질제거 성분 · 전신 흡수 및 자극 우려</td>
+        <td><span class="badge-safe">✓ 미포함</span></td>
+      </tr>
+      <tr>
+        <td>화학적 자외선 차단 필터</td>
+        <td>내분비계 교란 가능성으로 임신 중 물리적 필터 선호</td>
+        <td><span class="badge-safe">✓ 미포함</span></td>
+      </tr>
+      <tr>
+        <td>프탈레이트 (Phthalates)</td>
+        <td>내분비계 교란 물질 · 향료·가소제에 혼입 가능</td>
+        <td><span class="badge-safe">✓ 미포함 (제조사 확인)</span></td>
+      </tr>
+      <tr>
+        <td>포름알데히드 방출 방부제</td>
+        <td>알레르겐 · 잠재적 독성 우려</td>
+        <td><span class="badge-safe">✓ 미포함</span></td>
+      </tr>
+      <tr>
+        <td>파라벤 계열 방부제</td>
+        <td>에스트로겐 유사 작용 가능성 · 임신 중 기피 경향</td>
+        <td><span class="badge-safe">✓ 미포함</span></td>
+      </tr>
+      <tr>
+        <td>페녹시에탄올 (고농도)</td>
+        <td>신생아·수유부에서 주의 권고 (EMA 기준 1% 이하 제한)</td>
+        <td><span class="badge-safe">✓ 미포함</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Caution items -->
+  <div style="font-size:10px;letter-spacing:.12em;color:var(--amber-text);font-weight:500;margin-bottom:8px;">주의 안내가 필요한 성분 (위험이 아닌 데이터 공백 또는 주의 필요)</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+    <div style="background:var(--amber-bg);border:0.5px solid #f5d08a;border-radius:var(--radius-lg);padding:14px 16px;">
+      <div style="font-size:12px;font-weight:500;color:var(--amber-text);margin-bottom:6px;">향료 (Fragrance) — 주의 안내 필요</div>
+      <div style="font-size:11.5px;color:var(--text-secondary);line-height:1.75;">
+        <strong>프탈레이트 비함유 — 제조사 공식 확인 완료.</strong> 단, "향료"라는 표기 자체는 수십~수백 가지 화학물질의 조합을 하나의 단어로 표기한 것으로, 전체 조성은 비공개입니다. 극도로 민감한 고객이나 향 알레르기 보유 고객에게는 패치 테스트를 선제적으로 권장하세요.
+      </div>
+    </div>
+    <div style="background:var(--amber-bg);border:0.5px solid #f5d08a;border-radius:var(--radius-lg);padding:14px 16px;">
+      <div style="font-size:12px;font-weight:500;color:var(--amber-text);margin-bottom:6px;">병풀캘러스 세포외소포 — 임상 데이터 공백</div>
+      <div style="font-size:11.5px;color:var(--text-secondary);line-height:1.75;">
+        병풀 성분 자체는 임산부 안전 성분으로 널리 인정됩니다. 다만 <strong>캘러스 EV 형태의 임산부 대상 임상 데이터는 현재 존재하지 않습니다.</strong> 이는 위험해서가 아니라 신규 원료에서 일반적으로 발생하는 데이터 공백입니다.
+      </div>
+    </div>
+  </div>
+
+  <div class="preg-disclaimer">
+    <strong>권장 안내 문구 (모든 채널 공통):</strong><br>
+    "닥터배 엑소토카인 에센스겔은 레티놀·살리실산·파라벤·하이드로퀴논 등 임산부 주의 성분으로 널리 알려진 10대 항목이 포함되어 있지 않습니다. 다만, 임신 중 모든 스킨케어 제품의 사용은 담당 산부인과 전문의와 상담 후 결정하시기를 권장드립니다."<br><br>
+    <strong>이 문구는 "임산부 안전 제품"이라고 단정하지 않으면서, 근거 있는 안심 정보를 제공하는 균형잡힌 표현입니다.</strong>
+  </div>
+</div>
+
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<div class="section-wrap">
+  <div class="section-kicker">FAQ · 전문가 Q&A</div>
+  <div class="section-title">현장 전문가를 위한 질의응답</div>
+  <div class="section-sub">에스테틱 전문가와 고객으로부터 가장 자주 받는 질문과 전문가적 답변입니다.</div>
+
+  <div class="faq-stats">
+    <div class="faq-stat"><div class="faq-stat-n">4</div><div class="faq-stat-l">제품 설명 관련</div></div>
+    <div class="faq-stat"><div class="faq-stat-n">4</div><div class="faq-stat-l">사용법 · 제형 관련</div></div>
+    <div class="faq-stat"><div class="faq-stat-n">4</div><div class="faq-stat-l">성분 · 안전성 관련</div></div>
+    <div class="faq-stat"><div class="faq-stat-n">3</div><div class="faq-stat-l">임산부 · 민감 피부</div></div>
+  </div>
+
+  <!-- CATEGORY 1 -->
+  <div class="faq-cat">
+    <div class="faq-cat-head"><div class="faq-cat-bar bar-gold"></div><span class="faq-cat-title">제품 설명 관련</span><span class="faq-cat-count">4</span></div>
+
+    <div class="qi">
+      <div class="qt" onclick="tog(this)">
+        <div class="badge b-info">Q</div>
+        <div class="qt-inner">
+          <div class="qt-text">이 제품이 일반 마사지 크림과 다른 점은 무엇인가요?</div>
+          <div class="qt-row"><span class="ptag ptag-gen">일반</span></div>
+        </div>
+        <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg>
+      </div>
+      <div class="qa"><div class="qa-body">
+        <div class="verdict v-info">ℹ 제품 특성 설명</div><br>
+        일반 마사지 크림은 미네랄 오일, 실리콘, 동물성 유지 등의 오일 성분이 슬라이딩 매체로 작용하며 사용 후 피부에 유막이 남습니다. 반면 에센스겔은 <strong>수용성 점증제 기반의 오일프리 겔 제형</strong>으로, 1~2분 마사지 후 100% 흡수되어 아무것도 남지 않는다는 점에서 근본적으로 다릅니다.<br><br>
+        더 중요한 차이는 성분입니다. 에센스겔에는 병풀캘러스세포외소포(나노 전달체), 폴리글루타믹애씨드(γ-PGA, 발효 보습), 병풀 3대 활성 성분이 처방되어 있어, 마사지 과정 자체가 피부 컨디션 케어로 기능합니다. 마사지 크림은 슬라이딩을 위한 도구이지만, 에센스겔은 마사지를 통해 유효 성분을 피부에 전달하는 기능성 에센스입니다.
+      </div></div>
+    </div>
+
+    <div class="qi">
+      <div class="qt" onclick="tog(this)">
+        <div class="badge b-info">Q</div>
+        <div class="qt-inner">
+          <div class="qt-text">세포외소포(EV)와 엑소좀(Exosome)은 같은 건가요?</div>
+          <div class="qt-row"><span class="ptag ptag-pro">전문가</span></div>
+        </div>
+        <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg>
+      </div>
+      <div class="qa"><div class="qa-body">
+        <div class="verdict v-pro">전문가 설명</div><br>
+        엄밀히 말하면 엑소좀은 세포외소포(EV)의 하위 분류 중 하나입니다. EV는 크기와 생성 경로에 따라 ① 엑소좀(Exosome, 30~150 nm, 세포 내 다소체에서 유래), ② 마이크로베시클(Microvesicle, 100~1000 nm, 세포막 출아), ③ 아포토시스 소체(Apoptotic body)로 구분됩니다.<br><br>
+        화장품 업계에서 "엑소좀"이라는 단어가 널리 사용되지만, 국내 화장품 표시·광고법 및 식약처 가이드라인에서는 <strong>인체 유래 성분을 연상시킬 수 있는 "엑소좀"이라는 표현을 주의하여 사용해야 합니다.</strong> 닥터배는 이에 따라 공식적으로 <strong>"병풀캘러스세포외소포"</strong>라는 표현을 사용합니다. 이 성분은 식물(병풀) 유래임을 명확히 합니다.
+      </div></div>
+    </div>
+
+    <div class="qi">
+      <div class="qt" onclick="tog(this)">
+        <div class="badge b-info">Q</div>
+        <div class="qt-inner">
+          <div class="qt-text">γ-PGA(폴리글루타믹애씨드)가 히알루론산보다 좋은 건가요?</div>
+          <div class="qt-row"><span class="ptag ptag-gen">일반</span></div>
+        </div>
+        <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg>
+      </div>
+      <div class="qa"><div class="qa-body">
+        <div class="verdict v-info">ℹ 성분 비교 설명</div><br>
+        "어느 것이 더 좋다"는 단순 비교보다는, <strong>두 성분이 서로 다른 메커니즘으로 보습에 기여</strong>한다는 관점이 정확합니다.<br><br>
+        히알루론산(HA)은 주변 수분을 흡수하는 Hygroscopic 특성이 강하며, 다양한 분자량에 따라 피부의 서로 다른 깊이에서 작용합니다. γ-PGA는 분자 내 다수의 카르복실기(-COOH)로 수분을 직접 결합·고정하는 방식이 주요 기전으로, 피부 표면 보습막 형성에 기여하는 것으로 알려져 있습니다.<br><br>
+        에센스겔은 γ-PGA + 소듐하이알루로네이트 + 글리세린을 함께 처방하여 <strong>서로 다른 보습 메커니즘을 결합</strong>하는 방식을 채택했습니다. 하나보다 낫다기보다, 함께 써야 더 효과적이라는 설계 철학입니다.
+      </div></div>
+    </div>
+
+    <div class="qi">
+      <div class="qt" onclick="tog(this)">
+        <div class="badge b-info">Q</div>
+        <div class="qt-inner">
+          <div class="qt-text">토코포르테(갈색 앰플)와 에센스겔의 차이점 및 함께 사용하는 방법은?</div>
+          <div class="qt-row"><span class="ptag ptag-pro">전문가</span></div>
+        </div>
+        <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg>
+      </div>
+      <div class="qa"><div class="qa-body">
+        <div class="verdict v-pro">전문가 활용 가이드</div><br>
+        두 제품은 <strong>목적과 제형이 다르며 상호 보완적</strong>으로 사용할 수 있습니다.<br><br>
+        <strong>토코포르테(갈색 앰플):</strong> 항산화 캐스케이드(비타민 C 이중형 + 토코페롤 + GSH + 퀘세틴 등 5단계), B 비타민 풀 스펙트럼, 7종 다분자량 HA 복합체가 특징인 고농도 항산화·에너지 충전 부스터. 유리 바이알 스프레이 또는 도포 형태로 사용.<br><br>
+        <strong>에센스겔:</strong> 병풀 3대 활성 성분 + γ-PGA + 병풀캘러스EV 중심의 진정·피부 컨디션 케어·보습 특화. 겔 제형으로 마사지 매체 역할 동시 수행.<br><br>
+        <strong>함께 사용하는 방법:</strong> ① 토코포르테 스프레이 도포(가볍게 패팅 흡수) → ② 에센스겔로 1~2분 롤링 마사지 → ③ 마이크로젝션 어플리케이터 병용(선택). 이 순서는 항산화·에너지 충전 성분(토코포르테)을 먼저 피부에 올린 뒤, 에센스겔의 마사지 동작으로 두 성분을 동시에 피부 깊이 흡수시키는 시너지 프로토콜입니다.
+      </div></div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 2 -->
+  <div class="faq-cat">
+    <div class="faq-cat-head"><div class="faq-cat-bar bar-blue"></div><span class="faq-cat-title">사용법 · 제형 관련</span><span class="faq-cat-count">4</span></div>
+
+    <div class="qi">
+      <div class="qt" onclick="tog(this)">
+        <div class="badge b-info">Q</div>
+        <div class="qt-inner">
+          <div class="qt-text">왜 처음에는 미끌거리다가 1~2분 후에 사라지나요? 제형의 원리를 설명해 주세요.</div>
+          <div class="qt-row"><span class="ptag ptag-gen">일반</span></div>
+        </div>
+        <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg>
+      </div>
+      <div class="qa"><div class="qa-body">
+        <div class="verdict v-info">ℹ 제형 메커니즘 설명</div><br>
+        에센스겔의 슬리피-흡수 특성은 두 종류의 수용성 점증제(암모늄아크릴로일다이메틸타우레이트/VP코폴리머 + 아크릴레이트/C10-30알킬아크릴레이트크로스폴리머)가 만들어 내는 <strong>점탄성 겔 네트워크</strong>에서 비롯됩니다.<br><br>
+        도포 직후에는 이 점증제 네트워크가 수분을 잡아두면서 겔 상태를 유지하여 미끌거리는 감촉을 만듭니다. 마사지·롤링으로 <strong>물리적 전단력(Shear force)</strong>이 가해지면 이 네트워크의 가교 구조가 점진적으로 해소되면서 수분이 방출됩니다. 이 수분과 함께 γ-PGA, 소듐하이알루로네이트, 글리세린, 병풀캘러스EV 등의 활성 성분이 피부 내로 흡수되어 잔여물이 없어지는 것입니다.
+      </div></div>
+    </div>
+
+    <div class="qi">
+      <div class="qt" onclick="tog(this)">
+        <div class="badge b-info">Q</div>
+        <div class="qt-inner">
+          <div class="qt-text">관리 중 여러 번 덧발라도 되나요? 얼마나 사용해야 하나요?</div>
+          <div class="qt-row"><span class="ptag ptag-gen">일반</span></div>
+        </div>
+        <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg>
+      </div>
+      <div class="qa"><div class="qa-body">
+        <div class="verdict v-ok">✓ 자유롭게 덧바름 가능</div><br>
+        네, 관리 중 <strong>여러 번 덧발라도 전혀 문제없습니다.</strong> 에센스겔은 100% 흡수 제형이므로 이전에 도포한 양이 완전히 흡수된 후 다음 도포분을 올려도 밀림이 없습니다. 오히려 데콜테처럼 넓은 면적을 관리할 때 마사지 중간에 추가 도포하면서 연속 관리가 가능한 것이 이 제품의 강점입니다.<br><br>
+        적정 사용량은 관리 목적과 면적에 따라 다르지만, 얼굴 전체 1회 관리 기준으로 펌프 2~3회 분량(약 1~1.5g)이 적절하며, 데콜테·목까지 포함하면 이보다 더 사용해도 무방합니다.
+      </div></div>
+    </div>
+
+    <div class="qi">
+      <div class="qt" onclick="tog(this)">
+        <div class="badge b-info">Q</div>
+        <div class="qt-inner">
+          <div class="qt-text">다른 앰플과 섞어서 쓸 수 있나요? 믹싱 가능 범위는?</div>
+          <div class="qt-row"><span class="ptag ptag-pro">전문가</span></div>
+        </div>
+        <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg>
+      </div>
+      <div class="qa"><div class="qa-body">
+        <div class="verdict v-pro">전문가 실무 가이드</div><br>
+        에센스겔의 수용성 점증제 시스템은 대부분의 <strong>수용성(water-based) 앰플과 안정적으로 혼합</strong>됩니다. 토코포르테 앰플, 보습 앰플, 일반 진정 성분 앰플 등과 소량 혼합하면 점도를 높여 도포 편의성을 향상시킬 수 있습니다.<br><br>
+        <strong>주의가 필요한 조합:</strong> 칼슘 이온(Ca²⁺)을 다량 함유한 성분과의 직접 혼합은 카보머 계열 점증제의 망상 구조를 붕괴시켜 점도가 급격히 떨어지는 현상이 발생합니다. 닥터배 <strong>칼리 파우더 스킨부스터와의 직접 믹싱은 피하고</strong>, 도포 순서를 분리하여 사용하십시오 (예: 에센스겔 흡수 → 이후 칼리 파우더 제품 순으로 적용).<br><br>
+        오일 기반 제품과의 혼합은 분리 현상이 발생할 수 있으므로 사전 소량 테스트를 권장합니다.
+      </div></div>
+    </div>
+
+    <div class="qi">
+      <div class="qt" onclick="tog(this)">
+        <div class="badge b-info">Q</div>
+        <div class="qt-inner">
+          <div class="qt-text">보관 방법과 개봉 후 유통기한은 어떻게 되나요?</div>
+          <div class="qt-row"><span class="ptag ptag-gen">일반</span></div>
+        </div>
+        <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg>
+      </div>
+      <div class="qa"><div class="qa-body">
+        <div class="verdict v-info">ℹ 보관 가이드</div><br>
+        <strong>기본 보관:</strong> 직사광선을 피한 서늘하고 건조한 곳(15~25℃). 40℃ 이상의 고온이나 장시간 직사광선 노출을 피하세요.<br><br>
+        <strong>개봉 후 유통기한:</strong> 제품에 표기된 개봉 후 사용 기한(PAO, Period After Opening) 표시를 따르세요. 일반적으로 개봉 후 12개월 이내 사용을 권장합니다. 펌프 타입 제품의 특성상 공기 노출이 최소화되므로 일반 오픈 타입보다 유통기한 관리가 유리합니다.<br><br>
+        <strong>위생 관리:</strong> 클리닉 사용 시 펌프 노즐이 피부에 직접 닿지 않도록 하고, 사용 후 노즐을 알코올 티슈로 닦아 교차 오염을 방지하세요.
+      </div></div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 3 -->
+  <div class="faq-cat">
+    <div class="faq-cat-head"><div class="faq-cat-bar bar-green"></div><span class="faq-cat-title">성분 · 안전성 관련</span><span class="faq-cat-count">4</span></div>
+
+    <div class="qi">
+      <div class="qt" onclick="tog(this)">
+        <div class="badge b-ok">Q</div>
+        <div class="qt-inner">
+          <div class="qt-text">여드름성 피부에 사용해도 되나요? 모공을 막지 않나요?</div>
+          <div class="qt-row"><span class="ptag ptag-gen">일반</span></div>
+        </div>
+        <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg>
+      </div>
+      <div class="qa"><div class="qa-body">
+        <div class="verdict v-ok">✓ 일반적으로 적합</div><br>
+        에센스겔은 <strong>오일프리(Oil-free) 수용성 겔 제형</strong>으로 여드름성·지성 피부에 친화적입니다. 유분 성분이 없으며 100% 흡수 후 피막감이 없어 모공을 막을 우려가 낮습니다.<br><br>
+        방부제 시스템도 1,2-헥산다이올과 에틸헥실글리세린 조합(무파라벤, 무페녹시에탄올)을 사용하므로 예민한 여드름성 피부에 적합합니다.<br><br>
+        <strong>다만 유의사항이 있습니다:</strong> 전성분에 <strong>향료(Fragrance)가 포함</strong>되어 있으므로, 향 성분에 극도로 민감한 고객에게는 사전에 안내하고 패치 테스트를 권장하세요. 향료에 반응하는 여드름성 피부는 드물지 않습니다.
+      </div></div>
+    </div>
+
+    <div class="qi">
+      <div class="qt" onclick="tog(this)">
+        <div class="badge b-ok">Q</div>
+        <div class="qt-inner">
+          <div class="qt-text">파라벤이 없다고 하는데, 그럼 방부제는 어떻게 처리되어 있나요?</div>
+          <div class="qt-row"><span class="ptag ptag-gen">일반</span></div>
+        </div>
+        <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg>
+      </div>
+      <div class="qa"><div class="qa-body">
+        <div class="verdict v-ok">✓ 무파라벤 · 대체 방부 시스템 채택</div><br>
+        에센스겔은 <strong>1,2-헥산다이올</strong>과 <strong>에틸헥실글리세린</strong>의 조합으로 방부 기능을 구현합니다. 이 두 성분은 파라벤·페녹시에탄올 없이 방부 효과를 내는 대표적인 대체 방부 시스템입니다.<br><br>
+        <strong>1,2-헥산다이올:</strong> EWG 낮은 위험 등급. SkinSAFE 아기 안전 등급. 세균·진균에 대한 항균 효과와 함께 보습 기능도 가집니다.<br><br>
+        <strong>에틸헥실글리세린:</strong> 글리세린 유도체. 피부 컨디셔닝 기능과 함께 미생물의 표면 장력을 낮추어 1,2-헥산다이올의 방부 효과를 시너지적으로 강화합니다.
+      </div></div>
+    </div>
+
+    <div class="qi">
+      <div class="qt" onclick="tog(this)">
+        <div class="badge b-warn">Q</div>
+        <div class="qt-inner">
+          <div class="qt-text">향료가 포함되어 있는데 민감성 피부에 문제가 없나요?</div>
+          <div class="qt-row"><span class="ptag ptag-gen">일반</span></div>
+        </div>
+        <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg>
+      </div>
+      <div class="qa"><div class="qa-body">
+        <div class="verdict v-cond">⚠ 조건부 사용</div><br>
+        "향료"(Fragrance/Parfum)는 수십~수백 종의 향 원료 조합을 하나의 성분명으로 표기하는 것으로, 일부 향 성분은 민감성 피부에서 자극 반응을 유발할 수 있습니다. EU 화장품 규정에서는 특정 알레르기 유발 향료 26종을 0.01% 이상 포함 시 개별 성분명 공개를 의무화하고 있습니다.<br><br>
+        <strong>실무적 권고:</strong> 대부분의 고객에게는 일반적으로 문제가 없지만, 평소 향 성분에 과민 반응이 있거나, 아토피·심한 민감성 피부 고객에게는 사전에 손목 안쪽이나 귀 뒤 부위에 소량 패치 테스트(24~48시간)를 권장하세요. 향료 내 프탈레이트는 제조사 확인 결과 미포함입니다.
+      </div></div>
+    </div>
+
+    <div class="qi">
+      <div class="qt" onclick="tog(this)">
+        <div class="badge b-ok">Q</div>
+        <div class="qt-inner">
+          <div class="qt-text">닥터배 다른 스킨부스터 제품들과 함께 사용 가능한가요? 추천 조합이 있나요?</div>
+          <div class="qt-row"><span class="ptag ptag-pro">전문가</span></div>
+        </div>
+        <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg>
+      </div>
+      <div class="qa"><div class="qa-body">
+        <div class="verdict v-ok">✓ 병용 권장</div><br>
+        네, 닥터배 엑소토카인 스킨부스터 라인업과 함께 사용하면 각 제품의 특성이 시너지를 이룹니다.<br><br>
+        <strong>추천 조합:</strong><br>
+        · <strong>에센스겔 + 토코포르테(갈색 앰플):</strong> 항산화·에너지 충전(토코포르테) + 진정·보습·병풀 컨디션 케어(에센스겔). 시술 후 포스트-케어 또는 안티에이징 관리에 최적.<br>
+        · <strong>에센스겔 + 블루/핑크 스킨부스터 바이알:</strong> 에센스겔로 마사지 베이스를 먼저 적용 후 바이알 제품 도포. 흡수력이 높아진 상태에서 활성 성분 전달 극대화.<br>
+        · <strong>에센스겔 + 마이크로젝션 어플리케이터:</strong> 에센스겔로 피부 컨디셔닝 후 마이크로젝션 기기로 활성 성분을 각질층 하부까지 전달.<br><br>
+        <strong>주의:</strong> 칼리 파우더 스킨부스터와 에센스겔을 직접 혼합하지 마세요. 순서를 분리하여 사용하십시오.
+      </div></div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 4 -->
+  <div class="faq-cat">
+    <div class="faq-cat-head"><div class="faq-cat-bar bar-coral"></div><span class="faq-cat-title">임산부 · 민감 피부 관련</span><span class="faq-cat-count">3</span></div>
+
+    <div class="qi">
+      <div class="qt" onclick="tog(this)">
+        <div class="badge b-warn">Q</div>
+        <div class="qt-inner">
+          <div class="qt-text">임산부 고객에게 에센스겔 관리를 제공해도 되나요?</div>
+          <div class="qt-row"><span class="ptag ptag-pro">전문가</span></div>
+        </div>
+        <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg>
+      </div>
+      <div class="qa"><div class="qa-body">
+        <div class="verdict v-cond">⚠ 조건부 적용 가능</div><br>
+        에센스겔은 임산부 주의 성분으로 널리 알려진 10대 항목(레티놀, 살리실산 고농도, 하이드로퀴논, 벤조일퍼옥사이드, AHA 고농도, 화학적 UV 필터, 프탈레이트, 포름알데히드 방출체, 파라벤, 페녹시에탄올)이 전부 포함되어 있지 않습니다. 향료 내 프탈레이트도 제조사 확인 결과 미포함입니다.<br><br>
+        <strong>그러나 다음 사항을 사전 안내하세요:</strong><br>
+        ① 이 제품은 임산부를 대상으로 별도 임상을 진행한 제품이 아닙니다.<br>
+        ② 병풀캘러스세포외소포는 병풀 유래 성분으로 안전성이 높은 것으로 알려져 있으나, EV 형태의 임산부 임상 데이터는 아직 없습니다.<br>
+        ③ 향료 포함 제품으로 향에 민감한 경우 주의가 필요합니다.<br><br>
+        권장 안내 문구: <em>"임산부 주의 성분 10대 항목이 포함되어 있지 않은 제품입니다. 임신 중이시라면 담당 산부인과 전문의와 상담 후 사용 여부를 결정해 주시기 바랍니다."</em>
+      </div></div>
+    </div>
+
+    <div class="qi">
+      <div class="qt" onclick="tog(this)">
+        <div class="badge b-ok">Q</div>
+        <div class="qt-inner">
+          <div class="qt-text">아토피·심한 민감성 피부에도 사용 가능한가요?</div>
+          <div class="qt-row"><span class="ptag ptag-gen">일반</span></div>
+        </div>
+        <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg>
+      </div>
+      <div class="qa"><div class="qa-body">
+        <div class="verdict v-cond">⚠ 패치 테스트 권장</div><br>
+        에센스겔은 오일프리·무파라벤 제형으로 일반 민감성 피부에 적합하도록 설계되어 있으나, <strong>아토피 피부염 급성기나 매우 심한 민감성 피부</strong>에는 다음 점을 고려하세요.<br><br>
+        <strong>긍정적 요소:</strong> 오일프리, 무파라벤, 무페녹시에탄올, 병풀 3대 활성 성분의 진정 기능, γ-PGA와 HA의 수분 공급.<br><br>
+        <strong>주의 요소:</strong> 향료(Fragrance) 포함. 향 성분에 예민한 아토피 피부에서 자극 가능성이 있습니다.<br><br>
+        적용 전 손목 안쪽 또는 귀 뒤에 소량 도포 후 24~48시간 패치 테스트를 반드시 시행하고, 발적·가려움·자극감이 없을 때 전체 도포로 진행하세요. 아토피 급성기(삼출·염증 활성기)에는 전문의 상담 후 결정을 권장합니다.
+      </div></div>
+    </div>
+
+    <div class="qi">
+      <div class="qt" onclick="tog(this)">
+        <div class="badge b-ok">Q</div>
+        <div class="qt-inner">
+          <div class="qt-text">어린이에게 사용해도 되나요?</div>
+          <div class="qt-row"><span class="ptag ptag-gen">일반</span></div>
+        </div>
+        <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg>
+      </div>
+      <div class="qa"><div class="qa-body">
+        <div class="verdict v-cond">⚠ 전문의 상담 권장</div><br>
+        본 제품은 성인용 에스테틱 전문 제품으로 어린이를 대상으로 한 별도 임상 테스트가 진행된 제품이 아닙니다. 성인과 어린이는 피부 두께, 경피 흡수율, 피부 장벽 기능이 다르므로 동일하게 평가할 수 없습니다.<br><br>
+        어린이(특히 영유아·소아) 대상 사용은 반드시 피부과·소아과 전문의와 상담 후 결정하시기 바랍니다. 향료 포함 제품으로 어린이 피부에서의 자극 가능성에 특별히 유의하세요.
+      </div></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════ FULL INGREDIENT LIST ═══════════════ -->
+<div class="section-wrap" style="margin-bottom:10px;">
+  <div class="section-kicker">전성분 · Ingredients</div>
+  <div class="section-title" style="margin-bottom:12px;">닥터배 엑소토카인 에센스겔 전성분</div>
+
+  <div style="background:var(--bg-secondary);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:14px 16px;margin-bottom:14px;">
+    <div style="font-size:10px;letter-spacing:.08em;color:var(--text-tertiary);margin-bottom:8px;font-weight:500;">FULL INGREDIENT LIST (INCI)</div>
+    <div style="font-size:11.5px;color:var(--text-secondary);line-height:2.1;word-break:keep-all;">
+      정제수 · 암모늄아크릴로일다이메틸타우레이트/브이피코폴리머 · 아크릴레이트/C10-30알킬아크릴레이트크로스폴리머 · 폴리글루타믹애씨드 · 병풀캘러스세포외소포 · 마데카식애씨드 · 아시아틱애씨드 · 아시아티코사이드 · 1,2-헥산다이올 · 에틸헥실글리세린 · 소듐하이알루로네이트 · 글리세린 · 향료
+    </div>
+  </div>
+
+  <div style="font-size:10px;letter-spacing:.08em;color:var(--gold);font-weight:500;margin-bottom:10px;">원료 기능별 분류</div>
+  <div style="display:grid;grid-template-columns:1fr;gap:8px;">
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:var(--bg-secondary);border:0.5px solid var(--border);border-left:3px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;">
+      <div style="flex-shrink:0;width:80px;font-size:10.5px;font-weight:500;color:var(--gold-dark);padding-top:1px;">핵심 플랫폼</div>
+      <div style="font-size:11.5px;color:var(--text-secondary);line-height:1.7;">병풀캘러스세포외소포 (Centella Asiatica Callus Extracellular Vesicles) — 식물성 나노 전달체 + 바이오 액티브</div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:var(--bg-secondary);border:0.5px solid var(--border);border-left:3px solid #993c1d;border-radius:0 var(--radius) var(--radius) 0;">
+      <div style="flex-shrink:0;width:80px;font-size:10.5px;font-weight:500;color:#993c1d;padding-top:1px;">병풀 활성 성분</div>
+      <div style="font-size:11.5px;color:var(--text-secondary);line-height:1.7;">마데카식애씨드 · 아시아틱애씨드 · 아시아티코사이드 — 병풀 3대 트리테르페노이드 단일 성분 직접 처방</div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:var(--bg-secondary);border:0.5px solid var(--border);border-left:3px solid #185fa5;border-radius:0 var(--radius) var(--radius) 0;">
+      <div style="flex-shrink:0;width:80px;font-size:10.5px;font-weight:500;color:#185fa5;padding-top:1px;">보습 복합체</div>
+      <div style="font-size:11.5px;color:var(--text-secondary);line-height:1.7;">폴리글루타믹애씨드(γ-PGA, 낫또 발효 유래) · 소듐하이알루로네이트 · 글리세린 — 3중 보습 시스템</div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:var(--bg-secondary);border:0.5px solid var(--border);border-left:3px solid var(--teal-text);border-radius:0 var(--radius) var(--radius) 0;">
+      <div style="flex-shrink:0;width:80px;font-size:10.5px;font-weight:500;color:var(--teal-text);padding-top:1px;">제형 · 점증제</div>
+      <div style="font-size:11.5px;color:var(--text-secondary);line-height:1.7;">암모늄아크릴로일다이메틸타우레이트/VP코폴리머 · 아크릴레이트/C10-30알킬아크릴레이트크로스폴리머 — 슬리피 텍스처 + 100% 흡수 구현</div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:var(--bg-secondary);border:0.5px solid var(--border);border-left:3px solid #7a7a74;border-radius:0 var(--radius) var(--radius) 0;">
+      <div style="flex-shrink:0;width:80px;font-size:10.5px;font-weight:500;color:#4a4a46;padding-top:1px;">방부 시스템</div>
+      <div style="font-size:11.5px;color:var(--text-secondary);line-height:1.7;">1,2-헥산다이올 · 에틸헥실글리세린 — 무파라벤 · 무페녹시에탄올 대체 방부 시스템</div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:var(--bg-secondary);border:0.5px solid var(--border);border-left:3px solid #ba7517;border-radius:0 var(--radius) var(--radius) 0;">
+      <div style="flex-shrink:0;width:80px;font-size:10.5px;font-weight:500;color:#ba7517;padding-top:1px;">향 · 기타</div>
+      <div style="font-size:11.5px;color:var(--text-secondary);line-height:1.7;">향료(Fragrance) — 프탈레이트 미포함 확인 완료. 정제수(용매)</div>
+    </div>
+  </div>
+
+  <!-- Pregnancy summary -->
+  <div style="margin-top:14px;background:var(--green-bg);border:0.5px solid #c0dd97;border-radius:var(--radius-lg);padding:14px 16px;">
+    <div style="font-size:11px;font-weight:500;color:var(--green-text);margin-bottom:6px;">임산부 안전성 요약 — 전성분 13종 체크 결과</div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;font-size:11.5px;">
+      <div style="background:var(--bg);border-radius:var(--radius);padding:8px 10px;text-align:center;">
+        <div style="font-size:18px;font-weight:500;color:var(--green-text);">11종</div>
+        <div style="font-size:10px;color:var(--text-tertiary);">안전 (Known Safe)</div>
+      </div>
+      <div style="background:var(--bg);border-radius:var(--radius);padding:8px 10px;text-align:center;">
+        <div style="font-size:18px;font-weight:500;color:var(--amber-text);">2종</div>
+        <div style="font-size:10px;color:var(--text-tertiary);">주의 (향료·캘러스 EV)</div>
+      </div>
+      <div style="background:var(--bg);border-radius:var(--radius);padding:8px 10px;text-align:center;">
+        <div style="font-size:18px;font-weight:500;color:var(--green-text);">0종</div>
+        <div style="font-size:10px;color:var(--text-tertiary);">임산부 금기 성분</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:10px;padding:8px 12px;background:var(--bg-tertiary);border-radius:var(--radius);font-size:10.5px;color:var(--text-tertiary);line-height:1.7;">
+    총 13개 원료 · 전성분은 함량 높은 순으로 표기 · 본 자료는 화장품 표시·광고법을 준수합니다.
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<div class="doc-footer">
+  <div class="doc-footer-text">본 자료는 화장품 표시·광고법을 준수하여 작성되었으며, 의약품적 효능·효과를 표방하지 않습니다.<br>숭실대학교 의공학 연구실 · 배원규 교수 연구실 · ㈜배랩(Baelab Inc.) · 에스테틱 전문가 교육용</div>
+</div>
+
+</div><!-- end wrapper -->
+
+<script>
+function tog(q) {
+  var item = q.closest('.qi');
+  var wasOpen = item.classList.contains('op');
+  document.querySelectorAll('.qi.op').forEach(function(i){ i.classList.remove('op'); });
+  if (!wasOpen) item.classList.add('op');
+}
+</script>
+</body>
+</html>
